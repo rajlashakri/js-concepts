@@ -1,42 +1,56 @@
 "use client"
 
-import React from 'react'
-
-const topics = [
-  { label: 'Execution', active: true },
-  { label: 'Hoisting' },
-  { label: 'Scope' },
-  { label: 'Closure' },
-  { label: 'Promise' },
-]
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+import { sidebarTopics } from './sidebarTopics'
 
 export default function Sidebar() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
+
   return (
-    <aside className="hidden lg:flex lg:w-72 lg:flex-col lg:gap-4">
-      <div className="glass-panel p-6">
-        <div className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#8b949e]">Concepts</div>
-        <div className="space-y-2">
-          {topics.map((topic) => (
-            <button
-              key={topic.label}
-              className={`w-full rounded-2xl border px-4 py-3 text-left transition ${
-                topic.active
-                  ? 'border-[color:var(--secondary)] bg-[rgba(88,166,255,0.12)] text-white shadow-soft-ring'
-                  : 'border-[color:var(--border)] bg-[rgba(255,255,255,0.02)] text-[#cbd5e1] hover:border-[color:var(--secondary)] hover:bg-[rgba(88,166,255,0.08)]'
-              }`}
-            >
-              <span className="text-sm font-semibold">{topic.label}</span>
-              {topic.active ? <span className="ml-2 text-[0.8rem] text-[#58A6FF]">›</span> : null}
-            </button>
-          ))}
-        </div>
-      </div>
-      <div className="glass-panel p-6">
-        <div className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#8b949e]">Lesson Progress</div>
-        <div className="h-2 rounded-full bg-[rgba(255,255,255,0.08)]">
-          <div className="h-full rounded-full bg-gradient-to-r from-[#58A6FF] to-[#a78bfa]" style={{ width: '40%' }} />
-        </div>
-        <p className="mt-3 text-sm text-[#94a3b8]">Execution Context is selected. Keep going to unlock the next concept.</p>
+    <aside className="hidden lg:flex lg:w-80 lg:flex-col lg:gap-4 lg:sticky lg:top-24 lg:self-start">
+      <div className="w-full rounded-3xl bg-[#050608] p-4 shadow-[0_20px_70px_rgba(0,0,0,0.45)] ring-1 ring-white/10">
+        <div className="mb-3 px-2 text-sm font-semibold uppercase tracking-[0.26em] text-gray-500">Contents</div>
+        <nav className="space-y-2">
+          {sidebarTopics.map((section, idx) => {
+            const isOpen = openIndex === idx
+            return (
+              <div key={section.title} className="overflow-hidden rounded-3xl border border-white/5">
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(isOpen ? null : idx)}
+                  className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left text-sm font-medium text-white transition-colors duration-200 hover:bg-white/5"
+                >
+                  <span className="truncate">{section.title}</span>
+                  <span className="text-xs text-gray-400">{isOpen ? '▾' : '▸'}</span>
+                </button>
+
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={isOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+                  transition={{ duration: 0.25, ease: 'easeOut' }}
+                  className="overflow-hidden px-2"
+                >
+                  <div className="mt-2 flex flex-col gap-1 pb-3">
+                    {section.topics.map((topic) => (
+                      <div
+                        key={topic}
+                        className="flex items-center justify-between rounded-2xl px-3 py-2 text-sm text-gray-200 transition-colors duration-200 hover:bg-white/5"
+                      >
+                        <span className="truncate">{topic}</span>
+                        {topic === 'Execution Context' ? (
+                          <span className="ml-2 rounded-full bg-yellow-400/10 px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-yellow-300">
+                            Coming soon
+                          </span>
+                        ) : null}
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              </div>
+            )
+          })}
+        </nav>
       </div>
     </aside>
   )
