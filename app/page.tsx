@@ -1,32 +1,30 @@
 "use client"
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { BookOpen, BrainCircuit, Code2, Sparkles, TerminalSquare, Zap } from 'lucide-react'
 import ColorBends from '@/components/ColorBends'
 import Sidebar from '@/components/Sidebar'
 import { sidebarTopics } from '@/components/sidebarTopics'
 
-const conceptSections = [
-  {
-    title: 'Execution Context',
-    description: 'Understand how JavaScript creates memory and runs your code step by step.',
-    icon: BrainCircuit,
-  },
-  {
-    title: 'Closures',
-    description: 'See how functions retain access to their lexical environment.',
-    icon: Code2,
-  },
-  {
-    title: 'Promises',
-    description: 'Visualize async flow with real-time state transitions.',
-    icon: TerminalSquare,
-  },
-]
 
 export default function HomePage() {
-  const [selectedTopic, setSelectedTopic] = useState('Execution Context')
+  const pathname = usePathname()
+  const [selectedTopic, setSelectedTopic] = useState('')
+
+  useEffect(() => {
+    if (pathname && pathname.startsWith('/learn/')) {
+      const topicFromPath = pathname.replace('/learn/', '').replace(/-/g, ' ')
+      const matchingTopic = sidebarTopics
+        .flatMap((section) => section.topics)
+        .find((topic) => topic.toLowerCase() === topicFromPath.toLowerCase())
+
+      if (matchingTopic) {
+        setSelectedTopic(matchingTopic)
+      }
+    }
+  }, [pathname])
 
   const selectedSection = useMemo(
     () => sidebarTopics.find((section) => section.topics.includes(selectedTopic)),
@@ -47,88 +45,98 @@ export default function HomePage() {
               transition={{ duration: 0.6, ease: 'easeOut' }}
               className="space-y-8 rounded-[32px] border border-white/10 bg-[#11151F]/95 p-4 shadow-[0_0_90px_rgba(88,166,255,0.12)] backdrop-blur-xl transition-all duration-300 ease-out sm:p-6 xl:p-8"
             >
-              <div className="rounded-[32px] border border-white/10 bg-[#0B111A]/90 p-6 shadow-[0_0_40px_rgba(8,18,38,0.35)] transition-all duration-300">
-                <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
-                  <div className="max-w-2xl">
-                    <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#F7DF1E]/25 bg-[#F7DF1E]/10 px-3 py-1 text-sm text-[#F7DF1E]">
-                      <Sparkles size={16} />
-                      Interactive JavaScript learning experience
-                    </div>
-                    <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-                      {selectedTopic}
-                    </h1>
-                    <p className="mt-4 max-w-2xl text-lg text-[#8B949E]">
-                      Learn deeper about {selectedTopic.toLowerCase()} with curated examples, progress highlights, and a modern dashboard-style study flow.
-                    </p>
-                  </div>
-                  <div className="rounded-3xl border border-white/10 bg-[#0D1117]/80 px-5 py-4 shadow-[0_15px_40px_rgba(0,0,0,0.18)]">
-                    <p className="text-sm text-[#8B949E]">Active module</p>
-                    <p className="mt-3 text-4xl font-semibold text-white">{selectedSection?.title ?? 'JavaScript Fundamentals'}</p>
-                    <p className="text-sm text-[#6B7280]">{selectedSection?.topics.length ?? 0} topics available</p>
-                  </div>
-                </div>
-              </div>
+             {selectedTopic ? (
+  <>
+    {/* Your existing topic UI */}
+  </>
+) : (
+  <motion.div
+    initial={{ opacity: 0, y: 40, scale: 0.96 }}
+    animate={{ opacity: 1, y: 0, scale: 1 }}
+    transition={{
+      duration: 0.7,
+      ease: "easeOut",
+    }}
+    className="flex min-h-[70vh] flex-col items-center justify-center rounded-[32px] border border-white/10 bg-[#0B111A]/90 p-10 text-center"
+  >
+    <div className="mb-8 rounded-full bg-gradient-to-r from-[#58A6FF] to-[#A855F7] p-5 shadow-[0_0_50px_rgba(88,166,255,0.35)]">
+      <BrainCircuit size={60} className="text-white" />
+    </div>
 
-              <div className="grid gap-4 xl:grid-cols-[1.4fr_0.6fr]">
-                <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                  <div className="rounded-[28px] border border-white/10 bg-[#0C1421]/80 p-6 transition-all duration-300 hover:border-white/20 hover:bg-[#101828]/90">
-                    <p className="text-sm text-[#8B949E]">Current pace</p>
-                    <p className="mt-4 text-5xl font-semibold text-white">Fast</p>
-                    <p className="mt-3 text-sm text-[#6B7280]">Keep the momentum going</p>
-                  </div>
-                  <div className="rounded-[28px] border border-white/10 bg-[#0C1421]/80 p-6 transition-all duration-300 hover:border-white/20 hover:bg-[#101828]/90">
-                    <p className="text-sm text-[#8B949E]">Retention</p>
-                    <p className="mt-4 text-5xl font-semibold text-white">84%</p>
-                    <p className="mt-3 text-sm text-[#6B7280]">Concept mastery score</p>
-                  </div>
-                  <div className="rounded-[28px] border border-white/10 bg-[#0C1421]/80 p-6 transition-all duration-300 hover:border-white/20 hover:bg-[#101828]/90">
-                    <p className="text-sm text-[#8B949E]">Next lesson</p>
-                    <p className="mt-4 text-5xl font-semibold text-white">Closures</p>
-                    <p className="mt-3 text-sm text-[#6B7280]">Ready when you are</p>
-                  </div>
-                </div>
+    <h1 className="text-5xl font-bold text-white">
+      Welcome to Code with Baba 🚀
+    </h1>
 
-                <div className="space-y-4">
-                  <div className="rounded-[28px] border border-white/10 bg-[#0C1421]/80 p-6 transition-all duration-300 hover:border-white/20 hover:bg-[#101828]/90">
-                    <div className="flex items-center justify-between gap-4">
-                      <div>
-                        <p className="text-sm text-[#8B949E]">Current focus</p>
-                        <p className="mt-2 text-2xl font-semibold text-white">{selectedTopic}</p>
-                      </div>
-                      <div className="rounded-full bg-[#111827] p-3 text-[#58A6FF]">
-                        <Zap size={20} />
-                      </div>
-                    </div>
-                    <div className="mt-6 rounded-3xl border border-white/10 bg-[#111827]/90 p-4">
-                      <p className="text-xs uppercase tracking-[0.32em] text-[#64748B]">Lesson status</p>
-                      <p className="mt-3 text-xl font-semibold text-white">In progress</p>
-                      <div className="mt-4 h-2 rounded-full bg-[#111827]">
-                        <div className="h-full w-3/5 rounded-full bg-gradient-to-r from-[#58A6FF] to-[#a78bfa]" />
-                      </div>
-                    </div>
-                  </div>
+    <p className="mt-6 max-w-3xl text-xl leading-9 text-[#94A3B8]">
+      Learn modern JavaScript in the easiest way possible.
+      Every concept is explained in
+      <span className="font-semibold text-[#58A6FF]">
+        {" "}English
+      </span>
+      ,
+      <span className="font-semibold text-[#F7DF1E]">
+        {" "}Hindi
+      </span>
+      ,
+      and
+      <span className="font-semibold text-[#A855F7]">
+        {" "}Chindi
+      </span>
+      with real-world examples, interview questions, dry runs,
+      visual explanations, and best practices.
+    </p>
 
-                  <div className="rounded-[28px] border border-white/10 bg-[#0C1421]/80 p-6 transition-all duration-300 hover:border-white/20 hover:bg-[#101828]/90">
-                    <div className="mb-4 flex items-center justify-between gap-4">
-                      <div>
-                        <p className="text-sm text-[#8B949E]">Selected section</p>
-                        <p className="mt-2 text-xl font-semibold text-white">{selectedSection?.title ?? 'JS Concepts'}</p>
-                      </div>
-                      <div className="rounded-full bg-[#111827] p-3 text-[#F7DF1E]">
-                        <BookOpen size={20} />
-                      </div>
-                    </div>
-                    <ul className="space-y-3 text-sm text-[#9CA3AF]">
-                      {selectedSection?.topics.slice(0, 3).map((item) => (
-                        <li key={item} className="flex items-center justify-between rounded-2xl bg-[#111827] px-4 py-3">
-                          <span>{item}</span>
-                          <span className="rounded-full bg-[#111827] px-2 py-1 text-[#58A6FF]">{item === selectedTopic ? 'Now' : 'Soon'}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
+    <div className="mt-10 grid gap-5 md:grid-cols-3">
+
+      <div className="rounded-3xl border border-white/10 bg-[#111827] p-6">
+        <Code2 className="mx-auto mb-4 text-[#58A6FF]" size={36}/>
+        <h3 className="text-lg font-semibold text-white">
+          Beginner Friendly
+        </h3>
+        <p className="mt-2 text-sm text-[#94A3B8]">
+          Start from zero and master JavaScript step by step.
+        </p>
+      </div>
+
+      <div className="rounded-3xl border border-white/10 bg-[#111827] p-6">
+        <BrainCircuit className="mx-auto mb-4 text-[#F7DF1E]" size={36}/>
+        <h3 className="text-lg font-semibold text-white">
+          Interview Ready
+        </h3>
+        <p className="mt-2 text-sm text-[#94A3B8]">
+          Learn exactly what top companies ask in interviews.
+        </p>
+      </div>
+
+      <div className="rounded-3xl border border-white/10 bg-[#111827] p-6">
+        <TerminalSquare className="mx-auto mb-4 text-[#A855F7]" size={36}/>
+        <h3 className="text-lg font-semibold text-white">
+          Code & Practice
+        </h3>
+        <p className="mt-2 text-sm text-[#94A3B8]">
+          Understand concepts through examples, visualizations, and coding.
+        </p>
+      </div>
+
+    </div>
+
+    <motion.div
+      animate={{
+        y: [0, -10, 0],
+      }}
+      transition={{
+        repeat: Infinity,
+        duration: 2,
+      }}
+      className="mt-12 rounded-full bg-[#58A6FF]/10 px-8 py-4"
+    >
+      <p className="text-[#58A6FF] font-semibold">
+        👈 Select any topic from the sidebar to begin learning.
+      </p>
+    </motion.div>
+
+  </motion.div>
+)}
             </motion.div>
           </section>
         </div>

@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { sidebarTopics } from './sidebarTopics'
 
@@ -11,6 +12,18 @@ interface SidebarProps {
 
 export default function Sidebar({ selectedTopic, onTopicSelect }: SidebarProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const router = useRouter()
+
+  const getTopicSlug = (topic: string) =>
+    topic
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '')
+
+  const handleTopicSelect = (topic: string) => {
+    onTopicSelect(topic)
+    router.push(`/learn/${getTopicSlug(topic)}`)
+  }
 
   return (
     <aside className="hidden lg:flex lg:w-80 lg:flex-col lg:gap-4 lg:sticky lg:top-[7rem] lg:self-start">
@@ -43,7 +56,7 @@ export default function Sidebar({ selectedTopic, onTopicSelect }: SidebarProps) 
                         <button
                           key={topic}
                           type="button"
-                          onClick={() => onTopicSelect(topic)}
+                          onClick={() => handleTopicSelect(topic)}
                           className={`flex w-full items-center justify-between rounded-2xl px-3 py-2 text-sm transition duration-200 ${
                             isActive
                               ? 'bg-white/10 text-white shadow-inner'
