@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@react-three/fiber": "^9.0.0",
+    "three": "^0.164.0",
     "@monaco-editor/react": "^4.7.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.0.3",
