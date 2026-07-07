@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { BookOpen, BrainCircuit, Code2, Play, Sparkles, TerminalSquare, Zap } from 'lucide-react'
 import ColorBends from '@/components/ColorBends'
+import Sidebar from '@/components/Sidebar'
 
 const conceptSections = [
   {
@@ -26,7 +27,8 @@ export default function HomePage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#0D1117] text-[#E6EDF3]">
       <ColorBends />
-      <section className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 py-20 lg:px-8">
+      <section className="relative z-10 mx-auto grid min-h-screen max-w-7xl gap-8 px-6 py-20 lg:grid-cols-[280px_1fr] lg:px-8">
+        <Sidebar />
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
