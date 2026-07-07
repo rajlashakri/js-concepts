@@ -4,9 +4,9 @@ import React from 'react'
 
 export default function Navbar() {
   return (
-    <header className="fixed inset-x-0 top-4 z-50 pointer-events-auto">
-      <div className="mx-auto flex max-w-7xl px-4 sm:px-6">
-        <nav className="flex w-full flex-wrap items-center justify-between gap-3 rounded-2xl px-4 py-3 transition-all duration-300 sm:px-5">
+    <header className="fixed inset-x-0 top-0 z-50 pointer-events-auto bg-[#02040b] border-b border-white/10 shadow-[0_25px_80px_rgba(0,0,0,0.16)]">
+      <div className="mx-auto flex max-w-7xl px-4 py-4 sm:px-6">
+        <nav className="flex w-full flex-wrap items-center justify-between gap-3 rounded-3xl border border-white/5 bg-[#0B1220] px-4 py-3 transition-all duration-300 shadow-lg sm:px-5">
           <div className="flex items-center gap-3">
             <div className="grid h-10 w-10 place-items-center rounded-[10px] bg-[#0B1220] border border-white/5 text-base font-bold text-white">N</div>
             <div className="text-sm font-semibold text-white">JS Concepts</div>

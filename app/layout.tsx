@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className="bg-[#0D1117] text-[#E6EDF3]">
         <Navbar />
-        <div style={{ position: 'relative', zIndex: 10, paddingTop: 96 }}>{children}</div>
+        <div style={{ position: 'relative', zIndex: 10, paddingTop: 112, minHeight: '100vh' }}>{children}</div>
       </body>
     </html>
   )
