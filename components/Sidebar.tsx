@@ -20,9 +20,9 @@ export default function Sidebar({ selectedTopic, onTopicSelect }: SidebarProps) 
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/(^-|-$)/g, '')
 
-  const handleTopicSelect = (topic: string) => {
+  const handleTopicSelect = (category: string, topic: string) => {
     onTopicSelect(topic)
-    router.push(`/learn/${getTopicSlug(topic)}`)
+    router.push(`/learn/${category}/${getTopicSlug(topic)}`)
   }
 
   return (
@@ -50,25 +50,24 @@ export default function Sidebar({ selectedTopic, onTopicSelect }: SidebarProps) 
                   className="overflow-hidden px-2"
                 >
                   <div className="mt-2 flex flex-col gap-1 pb-3">
-                    {section.topics.map((topic) => {
+                    {section.topics.map((topic, topicIndex) => {
                       const isActive = topic === selectedTopic
                       return (
                         <button
-                          key={topic}
+                          key={`${section.title}-${topic}-${topicIndex}`}
                           type="button"
-                          onClick={() => handleTopicSelect(topic)}
-                          className={`flex w-full items-center justify-between rounded-2xl px-3 py-2 text-sm transition duration-200 ${
-                            isActive
+                          onClick={() => handleTopicSelect(section.category,topic)}
+                          className={`flex w-full items-center justify-between rounded-2xl px-3 py-2 text-sm transition duration-200 ${isActive
                               ? 'bg-white/10 text-white shadow-inner'
                               : 'text-gray-200 hover:bg-white/5'
-                          }`}
+                            }`}
                         >
                           <span className="truncate">{topic}</span>
-                          {topic === 'Execution Context' ? (
+                          {/* {topic === 'Execution Context' ? (
                             <span className="ml-2 rounded-full bg-yellow-400/10 px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-yellow-300">
                               Coming soon
                             </span>
-                          ) : null}
+                          ) : null} */}
                         </button>
                       )
                     })}

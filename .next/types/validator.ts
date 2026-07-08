@@ -36,33 +36,6 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 }
 
 
-// Validate ../../app/learn/call-stack/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/learn/call-stack">> = Specific
-  const handler = {} as typeof import("../../app/learn/call-stack/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
-// Validate ../../app/learn/execution-context/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/learn/execution-context">> = Specific
-  const handler = {} as typeof import("../../app/learn/execution-context/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
-// Validate ../../app/learn/function-execution-context/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/learn/function-execution-context">> = Specific
-  const handler = {} as typeof import("../../app/learn/function-execution-context/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
 // Validate ../../app/learn/global-execution-context/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/learn/global-execution-context">> = Specific
@@ -72,10 +45,46 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
   type __Unused = __Check
 }
 
-// Validate ../../app/learn/hoisting/page.tsx
+// Validate ../../app/learn/javascript/call-stack/page.tsx
 {
-  type __IsExpected<Specific extends AppPageConfig<"/learn/hoisting">> = Specific
-  const handler = {} as typeof import("../../app/learn/hoisting/page.js")
+  type __IsExpected<Specific extends AppPageConfig<"/learn/javascript/call-stack">> = Specific
+  const handler = {} as typeof import("../../app/learn/javascript/call-stack/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/learn/javascript/execution-context/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/learn/javascript/execution-context">> = Specific
+  const handler = {} as typeof import("../../app/learn/javascript/execution-context/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/learn/javascript/function-execution-context/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/learn/javascript/function-execution-context">> = Specific
+  const handler = {} as typeof import("../../app/learn/javascript/function-execution-context/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/learn/javascript/hoisting/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/learn/javascript/hoisting">> = Specific
+  const handler = {} as typeof import("../../app/learn/javascript/hoisting/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/learn/javascript/introduction-to-javascript/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/learn/javascript/introduction-to-javascript">> = Specific
+  const handler = {} as typeof import("../../app/learn/javascript/introduction-to-javascript/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

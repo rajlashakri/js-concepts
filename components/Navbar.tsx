@@ -1,8 +1,47 @@
 "use client"
 
-import React from 'react'
+
+import React, { useMemo, useState } from "react"
+import { useRouter } from "next/navigation"
+import { sidebarTopics } from "@/components/sidebarTopics"
 
 export default function Navbar() {
+  const router = useRouter()
+
+  const [query, setQuery] = useState("")
+  const [open, setOpen] = useState(false)
+
+  const allTopics = sidebarTopics.flatMap((section) =>
+    section.topics.map((topic) => ({
+      title: topic,
+      category: section.category,
+
+      slug: topic
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, ""),
+    }))
+  )
+
+  const filtered = useMemo(() => {
+    if (!query.trim()) return []
+
+    return allTopics.filter((item) =>
+      item.title.toLowerCase().includes(query.toLowerCase())
+    )
+  }, [query])
+
+  const handleSelect = (item: {
+    category: string
+    slug: string
+  }) => {
+    setQuery("")
+    setOpen(false)
+
+    router.push(
+      `/learn/${item.category}/${item.slug}`
+    )
+  }
   return (
     <header className="fixed inset-x-0 top-0 z-50 pointer-events-auto bg-[#02040b] border-b border-white/10 shadow-[0_25px_80px_rgba(0,0,0,0.16)]">
       <div className="mx-auto flex max-w-7xl px-4 py-4 sm:px-6">
@@ -13,10 +52,41 @@ export default function Navbar() {
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
-            <input
-              placeholder="Search"
-              className="min-w-[200px] rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none transition focus:border-[#58A6FF] focus:bg-white/10"
-            />
+            <div className="relative w-80">
+
+              <input
+                value={query}
+                onChange={(e) => {
+                  setQuery(e.target.value)
+                  setOpen(true)
+                }}
+                placeholder="Search JS Concept..."
+                className="w-full rounded-full border border-white/10 bg-white/5 px-4 py-2 text-white outline-none"
+              />
+
+              {open && filtered.length > 0 && (
+                <div className="absolute mt-2 w-full overflow-hidden rounded-xl border border-white/10 bg-[#111827] shadow-xl">
+
+                  {filtered.map((item) => (
+                    <button
+                      key={item.slug}
+                      onClick={() => handleSelect(item)}
+                      className="flex w-full flex-col px-4 py-3 text-left hover:bg-white/10"
+                    >
+                      <span className="text-white">
+                        {item.title}
+                      </span>
+
+                      <span className="text-xs text-gray-400">
+                        {item.category}
+                      </span>
+                    </button>
+                  ))}
+
+                </div>
+              )}
+
+            </div>
             <div className="flex flex-wrap items-center gap-2">
               <button className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition duration-200 hover:bg-white/10">
                 Progress

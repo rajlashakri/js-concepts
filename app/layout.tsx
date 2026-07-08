@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'JS Concepts Studio',
+  title: 'Code With B@B@',
   description: 'Premium interactive JavaScript learning platform',
 }
 

@@ -1,6 +1,7 @@
 export const sidebarTopics = [
   {
     title: "🚀 JavaScript Fundamentals",
+    category: "javascript",
     topics: [
       "Introduction to JavaScript",
       "Execution Context",
@@ -18,6 +19,7 @@ export const sidebarTopics = [
   },
   {
     title: "📦 Scope & Functions",
+    category: "javascript",
     topics: [
       "Scope",
       "Block Scope",
@@ -34,6 +36,7 @@ export const sidebarTopics = [
   },
   {
     title: "🎯 Objects & OOP",
+    category: "javascript",
     topics: [
       "Objects",
       "this Keyword",
@@ -53,6 +56,7 @@ export const sidebarTopics = [
   },
   {
     title: "⚡ Asynchronous JavaScript",
+    category: "javascript",
     topics: [
       "Synchronous vs Asynchronous",
       "Web APIs",
@@ -70,6 +74,7 @@ export const sidebarTopics = [
   },
   {
     title: "🔥 Advanced JavaScript",
+    category: "javascript",
     topics: [
       "Modules",
       "ES Modules",
@@ -90,6 +95,7 @@ export const sidebarTopics = [
   },
   {
     title: "🧠 Memory & Performance",
+    category: "javascript",
     topics: [
       "Memory Management",
       "Garbage Collection",
@@ -102,6 +108,7 @@ export const sidebarTopics = [
   },
   {
     title: "💻 Browser & DOM",
+    category: "javascript",
     topics: [
       "DOM",
       "DOM Manipulation",
@@ -116,6 +123,7 @@ export const sidebarTopics = [
   },
   {
     title: "🎓 Interview Preparation",
+    category: "javascript",
     topics: [
       "JavaScript Interview Questions",
       "Output Based Questions",
