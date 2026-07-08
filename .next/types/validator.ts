@@ -36,15 +36,6 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 }
 
 
-// Validate ../../app/learn/global-execution-context/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/learn/global-execution-context">> = Specific
-  const handler = {} as typeof import("../../app/learn/global-execution-context/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
 // Validate ../../app/learn/javascript/call-stack/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/learn/javascript/call-stack">> = Specific
@@ -67,6 +58,15 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 {
   type __IsExpected<Specific extends AppPageConfig<"/learn/javascript/function-execution-context">> = Specific
   const handler = {} as typeof import("../../app/learn/javascript/function-execution-context/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/learn/javascript/global-execution-context/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/learn/javascript/global-execution-context">> = Specific
+  const handler = {} as typeof import("../../app/learn/javascript/global-execution-context/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

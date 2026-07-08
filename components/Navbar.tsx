@@ -48,7 +48,7 @@ export default function Navbar() {
         <nav className="flex w-full flex-wrap items-center justify-between gap-3 rounded-3xl border border-white/5 bg-[#0B1220] px-4 py-3 transition-all duration-300 shadow-lg sm:px-5">
           <div className="flex items-center gap-3">
             <div className="grid h-10 w-10 place-items-center rounded-[10px] bg-[#0B1220] border border-white/5 text-base font-bold text-white">N</div>
-            <div className="text-sm font-semibold text-white">JS Concepts</div>
+            <div className="text-sm font-semibold text-white">Code With B@B@</div>
           </div>
 
           <div className="flex flex-wrap items-center gap-3">

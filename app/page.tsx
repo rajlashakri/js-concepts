@@ -59,7 +59,7 @@ export default function HomePage() {
                   </div>
 
                   <h1 className="text-5xl font-bold text-white">
-                    Welcome to Code with Baba 🚀
+                    Welcome to Code with B@b@ 🚀
                   </h1>
 
                   <p className="mt-6 max-w-3xl text-xl leading-9 text-[#94A3B8]">

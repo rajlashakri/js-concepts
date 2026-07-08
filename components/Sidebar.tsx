@@ -22,6 +22,8 @@ export default function Sidebar({ selectedTopic, onTopicSelect }: SidebarProps) 
 
   const handleTopicSelect = (category: string, topic: string) => {
     onTopicSelect(topic)
+
+    console.log('getTopicSlug(topic)',getTopicSlug(topic))
     router.push(`/learn/${category}/${getTopicSlug(topic)}`)
   }
 
