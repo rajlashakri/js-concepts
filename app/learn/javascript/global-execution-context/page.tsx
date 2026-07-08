@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Terminal, ChevronRight, Copy, Check, Lightbulb, AlertTriangle, CheckCircle2, HelpCircle, ArrowRight, ArrowLeft } from "lucide-react";
+import { Terminal, ChevronRight, Copy, Check, Lightbulb, AlertTriangle, CheckCircle2, HelpCircle, ArrowLeft } from "lucide-react";
 import { useRouter } from "next/navigation";
+import ContinueButton from "@/components/ContinueButton";
 
 const TOPIC = {
   topic: "Global Execution Context",
@@ -265,10 +266,10 @@ export default function GlobalExecutionContextPage({ props }: any) {
               </span>
               <p className="mt-1 text-[#e9edf2] font-medium">{t.nextTopicTitle}</p>
             </div>
-            <button className="flex items-center gap-1.5 px-4 py-2 rounded-md bg-[#e8b13a] text-[#0b0f14] font-medium text-sm hover:bg-[#f0bc4c] transition-colors">
-              Continue
-              <ArrowRight size={15} />
-            </button>
+            <ContinueButton
+              nextTopicSlug={t.nextTopicSlug}
+              nextTopicTitle={t.nextTopicTitle}
+            />
           </div>
         )}
       </div>
