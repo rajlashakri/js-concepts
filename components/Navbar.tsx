@@ -140,12 +140,11 @@ export default function Navbar() {
 
             <div className="flex items-center gap-3" onClick={() => router.push("/")}>
 
-              <div className="grid h-10 w-10 place-items-center overflow-hidden rounded-full border border-white/10 bg-[#111827]">
-                <img
+              <div className="grid h-10 w-10 place-items-center">
+                <img 
                   src="/vectorized-vectorized.svg"
                   alt="Code With B@B@ Logo"
-                  className="h-full w-full rounded-full object-cover"
-                />
+                />      
               </div>
 
               <div className="text-sm font-semibold text-white">
