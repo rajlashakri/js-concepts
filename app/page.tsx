@@ -7,7 +7,7 @@ import { BookOpen, BrainCircuit, Code2, Sparkles, TerminalSquare, Zap } from 'lu
 import ColorBends from '@/components/ColorBends'
 import Sidebar from '@/components/Sidebar'
 import { sidebarTopics } from '@/components/sidebarTopics'
-
+import Image from "next/image";
 
 export default function HomePage() {
   const pathname = usePathname()
@@ -54,8 +54,14 @@ export default function HomePage() {
                   }}
                   className="flex min-h-[70vh] flex-col items-center justify-center rounded-[32px] border border-white/10 bg-[#0B111A]/90 p-10 text-center"
                 >
-                  <div className="mb-8 rounded-full bg-gradient-to-r from-[#58A6FF] to-[#A855F7] p-5 shadow-[0_0_50px_rgba(88,166,255,0.35)]">
-                    <BrainCircuit size={60} className="text-white" />
+                  <div className="mb-8  p-5">
+                   <Image
+                      src="/vectorized-vectorized.svg"
+                      alt="Code With B@B@ Logo"
+                      width={120}
+                      height={120}
+                      className="rounded-t-3xl"
+                    />                       
                   </div>
 
                   <h1 className="text-5xl font-bold text-white">
