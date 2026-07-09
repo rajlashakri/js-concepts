@@ -6,6 +6,7 @@ export default function Page() {
       topic="IIFE"
       slug="iife"
       fileName="learn/iife.js"
+      diagramImage="/javascript/iife.png"
       nextTopicSlug="objects"
       nextTopicTitle="Objects"
     />

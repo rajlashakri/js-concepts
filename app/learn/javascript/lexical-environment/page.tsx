@@ -6,6 +6,7 @@ export default function Page() {
       topic="Lexical Environment"
       slug="lexical-environment"
       fileName="learn/lexical-environment.js"
+      diagramImage="/javascript/lexical-environment.png"
       nextTopicSlug="scope-chain"
       nextTopicTitle="Scope Chain"
     />

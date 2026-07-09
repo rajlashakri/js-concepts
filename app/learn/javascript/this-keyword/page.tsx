@@ -6,6 +6,7 @@ export default function Page() {
       topic="this Keyword"
       slug="this-keyword"
       fileName="learn/this-keyword.js"
+      diagramImage="/javascript/this-keyword.png"
       nextTopicSlug="call"
       nextTopicTitle="call()"
     />

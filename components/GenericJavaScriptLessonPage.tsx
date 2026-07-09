@@ -13,6 +13,7 @@ import {
 import { useRouter } from "next/navigation";
 import ContinueButton from "@/components/ContinueButton";
 import ConceptHeader from "@/components/ConceptHeader";
+import { createTopicData } from "@/components/javascriptTopicData";
 
 interface GenericJavaScriptLessonPageProps {
   topic: string;
@@ -85,54 +86,6 @@ function Section({
   );
 }
 
-const toVarName = (topic: string) =>
-  topic
-    .replace(/[^a-zA-Z0-9 ]/g, "")
-    .split(" ")
-    .filter(Boolean)
-    .map((part, index) =>
-      index === 0
-        ? part.toLowerCase()
-        : part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()
-    )
-    .join("") || "concept";
-
-function createTopicData(topic: string) {
-  const concept = toVarName(topic);
-  const lowerTopic = topic.toLowerCase();
-
-  return {
-    description: `Understand ${topic} in JavaScript with syntax, examples, dry run, common mistakes, and interview-ready notes.`,
-    englishExplanation: `${topic} is an important JavaScript concept that helps you write clearer, safer, and more predictable code. The core idea is to understand what problem it solves, how the syntax behaves, and what output JavaScript produces step by step.`,
-    babaKiBhashaExplanation: `${topic} JavaScript ka important concept hai jo code ko clear, safe, aur predictable banane mein help karta hai. Main point yeh hai ki yeh kis problem ko solve karta hai, syntax kaise behave karta hai, aur JavaScript step by step kya output deta hai.`,
-    whyExists: `${topic} exists because real programs need a consistent way to handle this behavior instead of relying on guesswork. Once you know the rule, debugging and interviews both become much easier.`,
-    babaKiBhashaWhyExists: `${topic} isliye exist karta hai kyunki real programs mein is behavior ko guesswork ke bajay clear rule ke saath handle karna padta hai. Rule samajh aate hi debugging aur interviews dono easy ho jaate hain.`,
-    realLifeExample: `Think of ${topic} like a labeled tool in a toolbox: when you know exactly what that tool is meant for, you pick it at the right time and avoid forcing the wrong tool into the job.`,
-    babaKiBhashaRealLifeExample: `${topic} ko toolbox ke labeled tool jaisa samjho: jab tumhe pata hota hai tool kis kaam ke liye hai, tab tum use right time pe use karte ho aur galat tool force nahi karte.`,
-    syntax: `// ${topic} basic pattern\nconst ${concept}Example = "learn ${lowerTopic}";\nconsole.log(${concept}Example);`,
-    babaKiBhashaSyntax: `// ${topic} ka basic pattern\nconst ${concept}Example = "learn ${lowerTopic}";\nconsole.log(${concept}Example);`,
-    basicExample: `const topic = "${topic}";\nconsole.log("Learning:", topic);`,
-    babaKiBhashaBasicExample: `const topic = "${topic}";\nconsole.log("Seekh rahe hain:", topic);`,
-    mediumExample: `function explain${concept.charAt(0).toUpperCase() + concept.slice(1)}(value) {\n  return \`${topic}: \${value}\`;\n}\n\nconsole.log(explain${concept.charAt(0).toUpperCase() + concept.slice(1)}("core idea"));`,
-    babaKiBhashaMediumExample: `function explain${concept.charAt(0).toUpperCase() + concept.slice(1)}(value) {\n  return \`${topic}: \${value}\`;\n}\n\nconsole.log(explain${concept.charAt(0).toUpperCase() + concept.slice(1)}("main idea"));`,
-    advancedExample: `const steps = ["definition", "syntax", "output"];\n\nsteps.forEach((step, index) => {\n  console.log(\`\${index + 1}. ${topic} - \${step}\`);\n});`,
-    babaKiBhashaAdvancedExample: `const steps = ["definition", "syntax", "output"];\n\nsteps.forEach((step, index) => {\n  console.log(\`\${index + 1}. ${topic} - \${step}\`);\n});`,
-    dryRun: `First JavaScript stores the topic value, then the function or loop runs, and finally each console.log prints the current value. The point is to observe the order of execution instead of only memorizing the final output.`,
-    babaKiBhashaDryRun: `Pehle JavaScript topic value store karta hai, phir function ya loop run hota hai, aur finally har console.log current value print karta hai. Main point final output ratna nahi, execution order samajhna hai.`,
-    output: `Learning: ${topic}`,
-    whyOutput: `The output appears because the value is assigned before console.log runs, so JavaScript can read the variable and print it normally.`,
-    babaKiBhashaWhyOutput: `Output isliye aata hai kyunki console.log chalne se pehle value assign ho chuki hoti hai, isliye JavaScript variable ko read karke normal print kar deta hai.`,
-    commonMistakes: `A common mistake is learning ${topic} only by definition and not testing small examples. Another mistake is ignoring edge cases, which usually appear in interviews and real debugging.`,
-    babaKiBhashaCommonMistakes: `Common mistake yeh hai ki ${topic} ko sirf definition se yaad karna aur small examples test na karna. Dusri mistake edge cases ignore karna hai, jo interviews aur real debugging mein aksar aate hain.`,
-    bestPractices: `Write a tiny example, predict the output before running it, then verify in the console. This habit makes ${topic} practical instead of just theoretical.`,
-    babaKiBhashaBestPractices: `Chhota example likho, run karne se pehle output predict karo, phir console mein verify karo. Is habit se ${topic} sirf theory nahi, practical concept ban jaata hai.`,
-    interviewQuestions: `Explain ${topic} with one simple example, then dry-run the code line by line and tell why the output appears in that order.`,
-    babaKiBhashaInterviewQuestions: `${topic} ko ek simple example ke saath explain karo, phir code ko line by line dry-run karke batao output us order mein kyun aata hai.`,
-    summary: `${topic} is best learned by connecting the definition, syntax, output, and mistakes together. Once you can dry-run it, you can use it confidently in real JavaScript code.`,
-    babaKiBhashaSummary: `${topic} ko definition, syntax, output, aur mistakes ko connect karke seekhna best hai. Jab tum ise dry-run kar sakte ho, tab real JavaScript code mein confidently use kar sakte ho.`,
-  };
-}
-
 export default function GenericJavaScriptLessonPage({
   topic,
   slug,
@@ -141,7 +94,7 @@ export default function GenericJavaScriptLessonPage({
   nextTopicSlug,
   nextTopicTitle,
 }: GenericJavaScriptLessonPageProps) {
-  const t = useMemo(() => createTopicData(topic), [topic]);
+  const t = useMemo(() => createTopicData(slug, topic), [slug, topic]);
   const [activeTab, setActiveTab] = useState<"english" | "babaKiBhasha">("english");
   const router = useRouter();
 

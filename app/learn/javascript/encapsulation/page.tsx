@@ -6,6 +6,7 @@ export default function Page() {
       topic="Encapsulation"
       slug="encapsulation"
       fileName="learn/encapsulation.js"
+      diagramImage="/javascript/encapsulation.png"
       nextTopicSlug="polymorphism"
       nextTopicTitle="Polymorphism"
     />

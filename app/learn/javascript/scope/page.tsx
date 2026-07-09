@@ -6,6 +6,7 @@ export default function Page() {
       topic="Scope"
       slug="scope"
       fileName="learn/scope.js"
+      diagramImage="/javascript/scope.png"
       nextTopicSlug="block-scope"
       nextTopicTitle="Block Scope"
     />

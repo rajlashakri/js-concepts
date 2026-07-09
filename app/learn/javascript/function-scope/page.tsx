@@ -6,6 +6,7 @@ export default function Page() {
       topic="Function Scope"
       slug="function-scope"
       fileName="learn/function-scope.js"
+      diagramImage="/javascript/function-scope.png"
       nextTopicSlug="lexical-environment"
       nextTopicTitle="Lexical Environment"
     />

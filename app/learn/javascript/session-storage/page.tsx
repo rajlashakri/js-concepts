@@ -6,6 +6,7 @@ export default function Page() {
       topic="Session Storage"
       slug="session-storage"
       fileName="learn/session-storage.js"
+      diagramImage="/javascript/session-storage.png"
       nextTopicSlug="cookies"
       nextTopicTitle="Cookies"
     />

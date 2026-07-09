@@ -6,6 +6,7 @@ export default function Page() {
       topic="Callback Queue"
       slug="callback-queue"
       fileName="learn/callback-queue.js"
+      diagramImage="/javascript/callback-queue.png"
       nextTopicSlug="microtask-queue"
       nextTopicTitle="Microtask Queue"
     />

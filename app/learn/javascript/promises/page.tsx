@@ -6,6 +6,7 @@ export default function Page() {
       topic="Promises"
       slug="promises"
       fileName="learn/promises.js"
+      diagramImage="/javascript/promises.png"
       nextTopicSlug="promise-chaining"
       nextTopicTitle="Promise Chaining"
     />

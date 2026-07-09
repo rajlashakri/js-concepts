@@ -6,6 +6,7 @@ export default function Page() {
       topic="DOM Events"
       slug="dom-events"
       fileName="learn/dom-events.js"
+      diagramImage="/javascript/dom-events.png"
       nextTopicSlug="event-bubbling"
       nextTopicTitle="Event Bubbling"
     />

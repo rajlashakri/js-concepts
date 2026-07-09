@@ -6,6 +6,7 @@ export default function Page() {
       topic="Performance Optimization"
       slug="performance-optimization"
       fileName="learn/performance-optimization.js"
+      diagramImage="/javascript/performance-optimization.png"
       nextTopicSlug="dom"
       nextTopicTitle="DOM"
     />

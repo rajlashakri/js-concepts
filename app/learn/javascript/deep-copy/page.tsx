@@ -6,6 +6,7 @@ export default function Page() {
       topic="Deep Copy"
       slug="deep-copy"
       fileName="learn/deep-copy.js"
+      diagramImage="/javascript/deep-copy.png"
       nextTopicSlug="pass-by-value-vs-reference"
       nextTopicTitle="Pass by Value vs Reference"
     />

@@ -6,6 +6,7 @@ export default function Page() {
       topic="bind()"
       slug="bind"
       fileName="learn/bind.js"
+      diagramImage="/javascript/bind.png"
       nextTopicSlug="prototype"
       nextTopicTitle="Prototype"
     />

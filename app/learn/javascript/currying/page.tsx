@@ -6,6 +6,7 @@ export default function Page() {
       topic="Currying"
       slug="currying"
       fileName="learn/currying.js"
+      diagramImage="/javascript/currying.png"
       nextTopicSlug="memoization"
       nextTopicTitle="Memoization"
     />

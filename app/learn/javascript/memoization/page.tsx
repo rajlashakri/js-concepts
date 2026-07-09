@@ -6,6 +6,7 @@ export default function Page() {
       topic="Memoization"
       slug="memoization"
       fileName="learn/memoization.js"
+      diagramImage="/javascript/memoization.png"
       nextTopicSlug="debouncing"
       nextTopicTitle="Debouncing"
     />

@@ -6,6 +6,7 @@ export default function Page() {
       topic="fetch API"
       slug="fetch-api"
       fileName="learn/fetch-api.js"
+      diagramImage="/javascript/fetch-api.png"
       nextTopicSlug="modules"
       nextTopicTitle="Modules"
     />

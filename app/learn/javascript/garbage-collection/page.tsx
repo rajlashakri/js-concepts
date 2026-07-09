@@ -6,6 +6,7 @@ export default function Page() {
       topic="Garbage Collection"
       slug="garbage-collection"
       fileName="learn/garbage-collection.js"
+      diagramImage="/javascript/garbage-collection.png"
       nextTopicSlug="shallow-copy"
       nextTopicTitle="Shallow Copy"
     />

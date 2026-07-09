@@ -6,6 +6,7 @@ export default function Page() {
       topic="Object.create()"
       slug="object-create"
       fileName="learn/object-create.js"
+      diagramImage="/javascript/object-create.png"
       nextTopicSlug="constructor-functions"
       nextTopicTitle="Constructor Functions"
     />

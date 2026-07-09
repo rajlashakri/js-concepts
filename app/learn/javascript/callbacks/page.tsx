@@ -6,6 +6,7 @@ export default function Page() {
       topic="Callbacks"
       slug="callbacks"
       fileName="learn/callbacks.js"
+      diagramImage="/javascript/callbacks.png"
       nextTopicSlug="callback-hell"
       nextTopicTitle="Callback Hell"
     />

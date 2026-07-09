@@ -6,6 +6,7 @@ export default function Page() {
       topic="Iterators"
       slug="iterators"
       fileName="learn/iterators.js"
+      diagramImage="/javascript/iterators.png"
       nextTopicSlug="generators"
       nextTopicTitle="Generators"
     />

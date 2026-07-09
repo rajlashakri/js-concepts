@@ -6,6 +6,7 @@ export default function Page() {
       topic="Nullish Coalescing"
       slug="nullish-coalescing"
       fileName="learn/nullish-coalescing.js"
+      diagramImage="/javascript/nullish-coalescing.png"
       nextTopicSlug="destructuring"
       nextTopicTitle="Destructuring"
     />

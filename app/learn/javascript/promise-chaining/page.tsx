@@ -6,6 +6,7 @@ export default function Page() {
       topic="Promise Chaining"
       slug="promise-chaining"
       fileName="learn/promise-chaining.js"
+      diagramImage="/javascript/promise-chaining.png"
       nextTopicSlug="async-await"
       nextTopicTitle="async/await"
     />

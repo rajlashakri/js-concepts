@@ -6,6 +6,7 @@ export default function Page() {
       topic="Optional Chaining"
       slug="optional-chaining"
       fileName="learn/optional-chaining.js"
+      diagramImage="/javascript/optional-chaining.png"
       nextTopicSlug="nullish-coalescing"
       nextTopicTitle="Nullish Coalescing"
     />

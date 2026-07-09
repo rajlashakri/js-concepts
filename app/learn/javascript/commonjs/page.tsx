@@ -6,6 +6,7 @@ export default function Page() {
       topic="CommonJS"
       slug="commonjs"
       fileName="learn/commonjs.js"
+      diagramImage="/javascript/commonjs.png"
       nextTopicSlug="iterators"
       nextTopicTitle="Iterators"
     />

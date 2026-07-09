@@ -6,6 +6,7 @@ export default function Page() {
       topic="Destructuring"
       slug="destructuring"
       fileName="learn/destructuring.js"
+      diagramImage="/javascript/destructuring.png"
       nextTopicSlug="spread-operator"
       nextTopicTitle="Spread Operator"
     />

@@ -6,6 +6,7 @@ export default function Page() {
       topic="DOM Manipulation"
       slug="dom-manipulation"
       fileName="learn/dom-manipulation.js"
+      diagramImage="/javascript/dom-manipulation.png"
       nextTopicSlug="dom-events"
       nextTopicTitle="DOM Events"
     />

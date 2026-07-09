@@ -6,6 +6,7 @@ export default function Page() {
       topic="Debouncing"
       slug="debouncing"
       fileName="learn/debouncing.js"
+      diagramImage="/javascript/debouncing.png"
       nextTopicSlug="throttling"
       nextTopicTitle="Throttling"
     />

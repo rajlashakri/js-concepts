@@ -6,6 +6,7 @@ export default function Page() {
       topic="Web APIs"
       slug="web-apis"
       fileName="learn/web-apis.js"
+      diagramImage="/javascript/web-apis.png"
       nextTopicSlug="event-loop"
       nextTopicTitle="Event Loop"
     />

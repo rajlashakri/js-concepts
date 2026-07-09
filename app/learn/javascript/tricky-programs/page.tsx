@@ -6,6 +6,7 @@ export default function Page() {
       topic="Tricky Programs"
       slug="tricky-programs"
       fileName="learn/tricky-programs.js"
+      diagramImage="/javascript/tricky-programs.png"
       nextTopicSlug="coding-challenges"
       nextTopicTitle="Coding Challenges"
     />

@@ -6,6 +6,7 @@ export default function Page() {
       topic="Higher Order Functions"
       slug="higher-order-functions"
       fileName="learn/higher-order-functions.js"
+      diagramImage="/javascript/higher-order-functions.png"
       nextTopicSlug="callback-functions"
       nextTopicTitle="Callback Functions"
     />

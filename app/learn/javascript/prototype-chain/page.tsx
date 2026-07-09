@@ -6,6 +6,7 @@ export default function Page() {
       topic="Prototype Chain"
       slug="prototype-chain"
       fileName="learn/prototype-chain.js"
+      diagramImage="/javascript/prototype-chain.png"
       nextTopicSlug="object-create"
       nextTopicTitle="Object.create()"
     />

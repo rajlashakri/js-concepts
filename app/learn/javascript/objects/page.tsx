@@ -6,6 +6,7 @@ export default function Page() {
       topic="Objects"
       slug="objects"
       fileName="learn/objects.js"
+      diagramImage="/javascript/objects.png"
       nextTopicSlug="this-keyword"
       nextTopicTitle="this Keyword"
     />

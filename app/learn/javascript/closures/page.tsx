@@ -6,6 +6,7 @@ export default function Page() {
       topic="Closures"
       slug="closures"
       fileName="learn/closures.js"
+      diagramImage="/javascript/closures.png"
       nextTopicSlug="functions"
       nextTopicTitle="Functions"
     />

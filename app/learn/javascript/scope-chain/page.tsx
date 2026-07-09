@@ -6,6 +6,7 @@ export default function Page() {
       topic="Scope Chain"
       slug="scope-chain"
       fileName="learn/scope-chain.js"
+      diagramImage="/javascript/scope-chain.png"
       nextTopicSlug="closures"
       nextTopicTitle="Closures"
     />

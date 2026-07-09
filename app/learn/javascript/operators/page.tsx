@@ -6,6 +6,7 @@ export default function Page() {
       topic="Operators"
       slug="operators"
       fileName="learn/operators.js"
+      diagramImage="/javascript/operators.png"
       nextTopicSlug="truthy-falsy-values"
       nextTopicTitle="Truthy & Falsy Values"
     />

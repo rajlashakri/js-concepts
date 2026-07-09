@@ -6,6 +6,7 @@ export default function Page() {
       topic="Macrotask Queue"
       slug="macrotask-queue"
       fileName="learn/macrotask-queue.js"
+      diagramImage="/javascript/macrotask-queue.png"
       nextTopicSlug="callbacks"
       nextTopicTitle="Callbacks"
     />

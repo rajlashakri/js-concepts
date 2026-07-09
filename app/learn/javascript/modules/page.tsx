@@ -6,6 +6,7 @@ export default function Page() {
       topic="Modules"
       slug="modules"
       fileName="learn/modules.js"
+      diagramImage="/javascript/modules.png"
       nextTopicSlug="es-modules"
       nextTopicTitle="ES Modules"
     />

@@ -6,6 +6,7 @@ export default function Page() {
       topic="Microtask Queue"
       slug="microtask-queue"
       fileName="learn/microtask-queue.js"
+      diagramImage="/javascript/microtask-queue.png"
       nextTopicSlug="macrotask-queue"
       nextTopicTitle="Macrotask Queue"
     />

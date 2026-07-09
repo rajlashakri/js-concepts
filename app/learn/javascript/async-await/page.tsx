@@ -6,6 +6,7 @@ export default function Page() {
       topic="async/await"
       slug="async-await"
       fileName="learn/async-await.js"
+      diagramImage="/javascript/async-await.png"
       nextTopicSlug="fetch-api"
       nextTopicTitle="fetch API"
     />

@@ -6,6 +6,7 @@ export default function Page() {
       topic="Throttling"
       slug="throttling"
       fileName="learn/throttling.js"
+      diagramImage="/javascript/throttling.png"
       nextTopicSlug="event-delegation"
       nextTopicTitle="Event Delegation"
     />

@@ -6,6 +6,7 @@ export default function Page() {
       topic="MCQs"
       slug="mcqs"
       fileName="learn/mcqs.js"
+      diagramImage="/javascript/mcqs.png"
       nextTopicSlug="cheat-sheets"
       nextTopicTitle="Cheat Sheets"
     />

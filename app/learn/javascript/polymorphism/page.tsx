@@ -6,6 +6,7 @@ export default function Page() {
       topic="Polymorphism"
       slug="polymorphism"
       fileName="learn/polymorphism.js"
+      diagramImage="/javascript/polymorphism.png"
       nextTopicSlug="abstraction"
       nextTopicTitle="Abstraction"
     />

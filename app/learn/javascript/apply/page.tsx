@@ -6,6 +6,7 @@ export default function Page() {
       topic="apply()"
       slug="apply"
       fileName="learn/apply.js"
+      diagramImage="/javascript/apply.png"
       nextTopicSlug="bind"
       nextTopicTitle="bind()"
     />

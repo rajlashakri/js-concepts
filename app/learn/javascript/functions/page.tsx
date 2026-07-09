@@ -6,6 +6,7 @@ export default function Page() {
       topic="Functions"
       slug="functions"
       fileName="learn/functions.js"
+      diagramImage="/javascript/functions.png"
       nextTopicSlug="arrow-functions"
       nextTopicTitle="Arrow Functions"
     />

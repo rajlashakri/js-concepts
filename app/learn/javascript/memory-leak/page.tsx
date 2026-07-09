@@ -6,6 +6,7 @@ export default function Page() {
       topic="Memory Leak"
       slug="memory-leak"
       fileName="learn/memory-leak.js"
+      diagramImage="/javascript/memory-leak.png"
       nextTopicSlug="performance-optimization"
       nextTopicTitle="Performance Optimization"
     />

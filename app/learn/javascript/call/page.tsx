@@ -6,6 +6,7 @@ export default function Page() {
       topic="call()"
       slug="call"
       fileName="learn/call.js"
+      diagramImage="/javascript/call.png"
       nextTopicSlug="apply"
       nextTopicTitle="apply()"
     />

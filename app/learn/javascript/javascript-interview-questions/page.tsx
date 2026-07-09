@@ -6,6 +6,7 @@ export default function Page() {
       topic="JavaScript Interview Questions"
       slug="javascript-interview-questions"
       fileName="learn/javascript-interview-questions.js"
+      diagramImage="/javascript/javascript-interview-questions.png"
       nextTopicSlug="output-based-questions"
       nextTopicTitle="Output Based Questions"
     />

@@ -6,6 +6,7 @@ export default function Page() {
       topic="Classes"
       slug="classes"
       fileName="learn/classes.js"
+      diagramImage="/javascript/classes.png"
       nextTopicSlug="inheritance"
       nextTopicTitle="Inheritance"
     />
