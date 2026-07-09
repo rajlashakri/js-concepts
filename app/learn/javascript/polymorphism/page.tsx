@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Polymorphism"
       slug="polymorphism"
+      fileName="learn/polymorphism.js"
       nextTopicSlug="abstraction"
       nextTopicTitle="Abstraction"
     />

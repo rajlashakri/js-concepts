@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Cheat Sheets"
       slug="cheat-sheets"
+      fileName="learn/cheat-sheets.js"
     />
   );
 }

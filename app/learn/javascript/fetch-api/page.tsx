@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="fetch API"
       slug="fetch-api"
+      fileName="learn/fetch-api.js"
       nextTopicSlug="modules"
       nextTopicTitle="Modules"
     />

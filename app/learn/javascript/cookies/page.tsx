@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Cookies"
       slug="cookies"
+      fileName="learn/cookies.js"
       nextTopicSlug="javascript-interview-questions"
       nextTopicTitle="JavaScript Interview Questions"
     />

@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Microtask Queue"
       slug="microtask-queue"
+      fileName="learn/microtask-queue.js"
       nextTopicSlug="macrotask-queue"
       nextTopicTitle="Macrotask Queue"
     />

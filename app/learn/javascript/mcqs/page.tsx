@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="MCQs"
       slug="mcqs"
+      fileName="learn/mcqs.js"
       nextTopicSlug="cheat-sheets"
       nextTopicTitle="Cheat Sheets"
     />

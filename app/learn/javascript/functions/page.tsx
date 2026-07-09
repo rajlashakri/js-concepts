@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Functions"
       slug="functions"
+      fileName="learn/functions.js"
       nextTopicSlug="arrow-functions"
       nextTopicTitle="Arrow Functions"
     />

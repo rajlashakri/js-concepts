@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Scope"
       slug="scope"
+      fileName="learn/scope.js"
       nextTopicSlug="block-scope"
       nextTopicTitle="Block Scope"
     />

@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Memory Management"
       slug="memory-management"
+      fileName="learn/memory-management.js"
       nextTopicSlug="garbage-collection"
       nextTopicTitle="Garbage Collection"
     />

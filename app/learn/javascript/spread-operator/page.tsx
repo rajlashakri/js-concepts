@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Spread Operator"
       slug="spread-operator"
+      fileName="learn/spread-operator.js"
       nextTopicSlug="rest-parameters"
       nextTopicTitle="Rest Parameters"
     />

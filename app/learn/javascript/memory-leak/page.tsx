@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Memory Leak"
       slug="memory-leak"
+      fileName="learn/memory-leak.js"
       nextTopicSlug="performance-optimization"
       nextTopicTitle="Performance Optimization"
     />

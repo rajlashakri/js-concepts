@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Callbacks"
       slug="callbacks"
+      fileName="learn/callbacks.js"
       nextTopicSlug="callback-hell"
       nextTopicTitle="Callback Hell"
     />

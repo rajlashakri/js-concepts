@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Prototype"
       slug="prototype"
+      fileName="learn/prototype.js"
       nextTopicSlug="prototype-chain"
       nextTopicTitle="Prototype Chain"
     />

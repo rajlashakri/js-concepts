@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Macrotask Queue"
       slug="macrotask-queue"
+      fileName="learn/macrotask-queue.js"
       nextTopicSlug="callbacks"
       nextTopicTitle="Callbacks"
     />

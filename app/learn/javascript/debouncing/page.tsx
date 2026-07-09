@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Debouncing"
       slug="debouncing"
+      fileName="learn/debouncing.js"
       nextTopicSlug="throttling"
       nextTopicTitle="Throttling"
     />

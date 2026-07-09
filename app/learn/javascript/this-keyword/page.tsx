@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="this Keyword"
       slug="this-keyword"
+      fileName="learn/this-keyword.js"
       nextTopicSlug="call"
       nextTopicTitle="call()"
     />

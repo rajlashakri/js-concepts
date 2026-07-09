@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Pass by Value vs Reference"
       slug="pass-by-value-vs-reference"
+      fileName="learn/pass-by-value-vs-reference.js"
       nextTopicSlug="memory-leak"
       nextTopicTitle="Memory Leak"
     />

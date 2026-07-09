@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Truthy & Falsy Values"
       slug="truthy-falsy-values"
+      fileName="learn/truthy-falsy-values.js"
       nextTopicSlug="scope"
       nextTopicTitle="Scope"
     />

@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Constructor Functions"
       slug="constructor-functions"
+      fileName="learn/constructor-functions.js"
       nextTopicSlug="classes"
       nextTopicTitle="Classes"
     />

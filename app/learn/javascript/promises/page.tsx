@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Promises"
       slug="promises"
+      fileName="learn/promises.js"
       nextTopicSlug="promise-chaining"
       nextTopicTitle="Promise Chaining"
     />

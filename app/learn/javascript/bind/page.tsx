@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="bind()"
       slug="bind"
+      fileName="learn/bind.js"
       nextTopicSlug="prototype"
       nextTopicTitle="Prototype"
     />

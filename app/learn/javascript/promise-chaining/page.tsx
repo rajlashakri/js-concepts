@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Promise Chaining"
       slug="promise-chaining"
+      fileName="learn/promise-chaining.js"
       nextTopicSlug="async-await"
       nextTopicTitle="async/await"
     />

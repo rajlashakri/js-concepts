@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Deep Copy"
       slug="deep-copy"
+      fileName="learn/deep-copy.js"
       nextTopicSlug="pass-by-value-vs-reference"
       nextTopicTitle="Pass by Value vs Reference"
     />

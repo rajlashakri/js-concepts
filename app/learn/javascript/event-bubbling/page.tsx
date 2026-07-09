@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Event Bubbling"
       slug="event-bubbling"
+      fileName="learn/event-bubbling.js"
       nextTopicSlug="event-capturing"
       nextTopicTitle="Event Capturing"
     />

@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Synchronous vs Asynchronous"
       slug="synchronous-vs-asynchronous"
+      fileName="learn/synchronous-vs-asynchronous.js"
       nextTopicSlug="web-apis"
       nextTopicTitle="Web APIs"
     />

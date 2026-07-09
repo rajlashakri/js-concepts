@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Memoization"
       slug="memoization"
+      fileName="learn/memoization.js"
       nextTopicSlug="debouncing"
       nextTopicTitle="Debouncing"
     />

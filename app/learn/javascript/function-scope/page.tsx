@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Function Scope"
       slug="function-scope"
+      fileName="learn/function-scope.js"
       nextTopicSlug="lexical-environment"
       nextTopicTitle="Lexical Environment"
     />

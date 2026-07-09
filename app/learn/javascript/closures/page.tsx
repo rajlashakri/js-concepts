@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Closures"
       slug="closures"
+      fileName="learn/closures.js"
       nextTopicSlug="functions"
       nextTopicTitle="Functions"
     />

@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Event Loop"
       slug="event-loop"
+      fileName="learn/event-loop.js"
       nextTopicSlug="callback-queue"
       nextTopicTitle="Callback Queue"
     />

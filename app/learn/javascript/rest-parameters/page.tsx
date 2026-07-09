@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Rest Parameters"
       slug="rest-parameters"
+      fileName="learn/rest-parameters.js"
       nextTopicSlug="memory-management"
       nextTopicTitle="Memory Management"
     />

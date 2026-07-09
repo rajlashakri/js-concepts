@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Coding Challenges"
       slug="coding-challenges"
+      fileName="learn/coding-challenges.js"
       nextTopicSlug="mcqs"
       nextTopicTitle="MCQs"
     />

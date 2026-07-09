@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Optional Chaining"
       slug="optional-chaining"
+      fileName="learn/optional-chaining.js"
       nextTopicSlug="nullish-coalescing"
       nextTopicTitle="Nullish Coalescing"
     />

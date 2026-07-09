@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Throttling"
       slug="throttling"
+      fileName="learn/throttling.js"
       nextTopicSlug="event-delegation"
       nextTopicTitle="Event Delegation"
     />

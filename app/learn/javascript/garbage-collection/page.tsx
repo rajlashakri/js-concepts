@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Garbage Collection"
       slug="garbage-collection"
+      fileName="learn/garbage-collection.js"
       nextTopicSlug="shallow-copy"
       nextTopicTitle="Shallow Copy"
     />

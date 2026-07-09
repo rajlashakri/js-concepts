@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Abstraction"
       slug="abstraction"
+      fileName="learn/abstraction.js"
       nextTopicSlug="synchronous-vs-asynchronous"
       nextTopicTitle="Synchronous vs Asynchronous"
     />

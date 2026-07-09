@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Objects"
       slug="objects"
+      fileName="learn/objects.js"
       nextTopicSlug="this-keyword"
       nextTopicTitle="this Keyword"
     />

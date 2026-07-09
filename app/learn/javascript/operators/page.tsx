@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Operators"
       slug="operators"
+      fileName="learn/operators.js"
       nextTopicSlug="truthy-falsy-values"
       nextTopicTitle="Truthy & Falsy Values"
     />

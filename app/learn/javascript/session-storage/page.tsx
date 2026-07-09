@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Session Storage"
       slug="session-storage"
+      fileName="learn/session-storage.js"
       nextTopicSlug="cookies"
       nextTopicTitle="Cookies"
     />

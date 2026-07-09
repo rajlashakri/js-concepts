@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Inheritance"
       slug="inheritance"
+      fileName="learn/inheritance.js"
       nextTopicSlug="encapsulation"
       nextTopicTitle="Encapsulation"
     />

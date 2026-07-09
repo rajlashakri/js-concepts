@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Encapsulation"
       slug="encapsulation"
+      fileName="learn/encapsulation.js"
       nextTopicSlug="polymorphism"
       nextTopicTitle="Polymorphism"
     />

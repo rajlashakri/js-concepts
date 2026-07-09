@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Event Capturing"
       slug="event-capturing"
+      fileName="learn/event-capturing.js"
       nextTopicSlug="local-storage"
       nextTopicTitle="Local Storage"
     />

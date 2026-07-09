@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="IIFE"
       slug="iife"
+      fileName="learn/iife.js"
       nextTopicSlug="objects"
       nextTopicTitle="Objects"
     />

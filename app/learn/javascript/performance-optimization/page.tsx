@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Performance Optimization"
       slug="performance-optimization"
+      fileName="learn/performance-optimization.js"
       nextTopicSlug="dom"
       nextTopicTitle="DOM"
     />

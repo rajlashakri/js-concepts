@@ -9,14 +9,16 @@ import {
   Copy,
   HelpCircle,
   Lightbulb,
-  Terminal,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import ContinueButton from "@/components/ContinueButton";
+import ConceptHeader from "@/components/ConceptHeader";
 
 interface GenericJavaScriptLessonPageProps {
   topic: string;
   slug: string;
+  fileName?: string;
+  diagramImage?: string;
   nextTopicSlug?: string;
   nextTopicTitle?: string;
 }
@@ -134,6 +136,8 @@ function createTopicData(topic: string) {
 export default function GenericJavaScriptLessonPage({
   topic,
   slug,
+  fileName,
+  diagramImage,
   nextTopicSlug,
   nextTopicTitle,
 }: GenericJavaScriptLessonPageProps) {
@@ -152,18 +156,12 @@ export default function GenericJavaScriptLessonPage({
           Back
         </button>
 
-        <div className="mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-t-md bg-[#111823] border border-[#243042] border-b-0 font-mono text-xs text-[#7d8b9c]">
-            <Terminal size={13} className="text-[#e8b13a]" />
-            learn/{slug}.js
-          </div>
-          <div className="rounded-b-md rounded-tr-md border border-[#243042] bg-[#111823] px-6 py-8">
-            <h1 className="text-3xl md:text-4xl font-mono font-bold text-[#f2f5f8] tracking-tight">
-              {topic}
-            </h1>
-            <p className="mt-3 text-[#8b949e] text-base">{t.description}</p>
-          </div>
-        </div>
+        <ConceptHeader
+          topic={topic}
+          description={t.description}
+          fileName={fileName ?? `learn/${slug}.js`}
+          diagramImage={diagramImage}
+        />
 
         <div className="mb-12 rounded-lg border border-[#243042] bg-[#111823] overflow-hidden">
           <div className="flex border-b border-[#243042]">

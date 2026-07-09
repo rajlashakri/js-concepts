@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Terminal, ChevronRight, Copy, Check, Lightbulb, AlertTriangle, CheckCircle2, HelpCircle, ArrowLeft } from "lucide-react";
+import { Copy, Check, Lightbulb, AlertTriangle, CheckCircle2, HelpCircle, ArrowLeft } from "lucide-react";
 import { useRouter } from "next/navigation";
 import ContinueButton from "@/components/ContinueButton";
+import ConceptHeader from "@/components/ConceptHeader";
 
 const TOPIC = {
   topic: "Introduction to JavaScript",
@@ -128,19 +129,12 @@ export default function IntroductionToJavascriptPage({ props }: any) {
           Back
         </button>
 
-        {/* Header - editor tab style */}
-        <div className="mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-t-md bg-[#111823] border border-[#243042] border-b-0 font-mono text-xs text-[#7d8b9c]">
-            <Terminal size={13} className="text-[#e8b13a]" />
-            learn/introduction-to-javascript.js
-          </div>
-          <div className="rounded-b-md rounded-tr-md border border-[#243042] bg-[#111823] px-6 py-8">
-            <h1 className="text-3xl md:text-4xl font-mono font-bold text-[#f2f5f8] tracking-tight">
-              {t.topic}
-            </h1>
-            <p className="mt-3 text-[#8b949e] text-base">{t.description}</p>
-          </div>
-        </div>
+        <ConceptHeader
+          topic={t.topic}
+          description={t.description}
+          fileName="learn/introduction-to-javascript.js"
+          diagramImage="/javascript/introduction-to-javascript.png"
+        />
 
         {/* Explanation block - tabbed */}
         <div className="mb-12 rounded-lg border border-[#243042] bg-[#111823] overflow-hidden">
@@ -148,8 +142,8 @@ export default function IntroductionToJavascriptPage({ props }: any) {
             <button
               onClick={() => setActiveTab("english")}
               className={`px-5 py-3 text-xs font-mono uppercase tracking-wider transition-colors ${activeTab === "english"
-                  ? "text-[#e8b13a] border-b-2 border-[#e8b13a] bg-[#0b0f14]"
-                  : "text-[#7d8b9c] hover:text-[#c9d1d9]"
+                ? "text-[#e8b13a] border-b-2 border-[#e8b13a] bg-[#0b0f14]"
+                : "text-[#7d8b9c] hover:text-[#c9d1d9]"
                 }`}
             >
               English
@@ -157,8 +151,8 @@ export default function IntroductionToJavascriptPage({ props }: any) {
             <button
               onClick={() => setActiveTab("babaKiBhasha")}
               className={`px-5 py-3 text-xs font-mono uppercase tracking-wider transition-colors ${activeTab === "babaKiBhasha"
-                  ? "text-[#3ec988] border-b-2 border-[#3ec988] bg-[#0b0f14]"
-                  : "text-[#7d8b9c] hover:text-[#c9d1d9]"
+                ? "text-[#3ec988] border-b-2 border-[#3ec988] bg-[#0b0f14]"
+                : "text-[#7d8b9c] hover:text-[#c9d1d9]"
                 }`}
             >
               Baba ki Bhasha

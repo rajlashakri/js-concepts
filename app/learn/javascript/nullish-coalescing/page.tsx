@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Nullish Coalescing"
       slug="nullish-coalescing"
+      fileName="learn/nullish-coalescing.js"
       nextTopicSlug="destructuring"
       nextTopicTitle="Destructuring"
     />

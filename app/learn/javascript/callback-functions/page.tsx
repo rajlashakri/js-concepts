@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Callback Functions"
       slug="callback-functions"
+      fileName="learn/callback-functions.js"
       nextTopicSlug="iife"
       nextTopicTitle="IIFE"
     />

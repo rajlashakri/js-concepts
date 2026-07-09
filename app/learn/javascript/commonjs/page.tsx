@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="CommonJS"
       slug="commonjs"
+      fileName="learn/commonjs.js"
       nextTopicSlug="iterators"
       nextTopicTitle="Iterators"
     />

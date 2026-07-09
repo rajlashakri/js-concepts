@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Local Storage"
       slug="local-storage"
+      fileName="learn/local-storage.js"
       nextTopicSlug="session-storage"
       nextTopicTitle="Session Storage"
     />

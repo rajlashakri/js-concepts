@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="Event Delegation"
       slug="event-delegation"
+      fileName="learn/event-delegation.js"
       nextTopicSlug="optional-chaining"
       nextTopicTitle="Optional Chaining"
     />

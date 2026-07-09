@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="DOM"
       slug="dom"
+      fileName="learn/dom.js"
       nextTopicSlug="dom-manipulation"
       nextTopicTitle="DOM Manipulation"
     />

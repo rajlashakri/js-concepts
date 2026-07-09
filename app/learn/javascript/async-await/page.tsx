@@ -5,6 +5,7 @@ export default function Page() {
     <GenericJavaScriptLessonPage
       topic="async/await"
       slug="async-await"
+      fileName="learn/async-await.js"
       nextTopicSlug="fetch-api"
       nextTopicTitle="fetch API"
     />
